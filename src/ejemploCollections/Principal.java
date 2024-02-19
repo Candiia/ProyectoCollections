@@ -11,8 +11,8 @@ public class Principal {
 		
 		/*
 		 * En este ejercicio tendremos una colección List con distintos alumnos,
-		 * donde con los métodos de la Clase Collections tendremos que hacer distintas cosas
-		 * como por ejemplo: 
+		 * donde usaremos los métodos de la Clase Collections con ellos tendremos que
+		 * hacer distintas cosas como por ejemplo: 
 		 * Agregar alumnos con addAll.
 		 * Mostrar la lista de los alumnos.
 		 * Reemplazar un alumno antiguo por uno nuevo.
@@ -26,20 +26,21 @@ public class Principal {
 		int opcion, cero=0, idAlumno=0, posicion, posNuevo;
 		idAlumno++;
 		String nombre, apellido;
+		Alumno a ;
 		List<Alumno> alumnos = new ArrayList<Alumno>();
 
-		Alumno a1 = new Alumno("Lúcas", "Pérez", idAlumno);
+		Alumno a1 = new Alumno("Lúcas", "Pérez", idAlumno, 20, 6.3);
 		idAlumno++;
-		Alumno a2 = new Alumno("Pablo", "Gónzalez", idAlumno);
+		Alumno a2 = new Alumno("Pablo", "Gónzalez", idAlumno, 18, 5.3);
 		idAlumno++;
-		Alumno a3 = new Alumno("Sebastián", "Millán", idAlumno);
+		Alumno a3 = new Alumno("Sebastián", "Millán", idAlumno, 24, 8.4);
 		idAlumno++;
-		Alumno a4 = new Alumno("Candi", "Alcantarilla", idAlumno);
+		Alumno a4 = new Alumno("Candi", "Alcantarilla", idAlumno, 24, 8.4);
 		idAlumno++;
-		Alumno a5 = new Alumno("Lucía", "López", idAlumno);
+		Alumno a5 = new Alumno("Lucía", "López", idAlumno, 24, 8.4);
 		idAlumno++;
-		Alumno a6 = new Alumno("Marta", "Vázquez", idAlumno);
-		idAlumno++;
+		Alumno a6 = new Alumno("Marta", "Vázquez", idAlumno, 24, 8.4);
+		idAlumno++; 
 		
 	
 
@@ -54,18 +55,20 @@ public class Principal {
 		System.out.println("Bienvenidos al programa");
 		System.out.println("-----------------------");
 		do {
-			System.out.println("");
-			System.out.println("¿Qué quieres hacer?");
-			System.out.println("0 - Salir");
-			System.out.println("1 - Agregar Alumno");
-			System.out.println("2 - Mostrar lista de alumnos");
-			System.out.println("3 - Reemplazar un alumno antiguo por uno nuevo.");
-			System.out.println("4 - Buscar alumno con el apellido más lejano");
-			System.out.println("5 - Buscar el alumno con el apellido mas cernao alfabeticamente");
-			System.out.println("6 - Invertir la lista.");
-			System.out.println("7 - Intercambiar la posición de un alumno por otro.");
-			System.out.println("8 - Barajar la lista de alumnos");
-			
+			System.out.println("""
+					-----------------------------------------------------------------
+					0 - Salir
+					1 - Agregar Alumno
+					2 - Mostrar lista de alumnos
+					3 - Reemplazar un alumno antiguo por uno nuevo.
+					4 - Buscar alumno con el apellido más lejano.
+					5 - Buscar el alumno con el apellido mas cernao alfabeticamente.
+					6 - Invertir la lista.
+					7 - Intercambiar la posición de un alumno por otro.
+					8 - Barajar la lista de alumnos
+					-----------------------------------------------------------------
+					¿Qué desea hacer?
+					""");
 			opcion = Leer.datoInt();
 
 			switch (opcion) {
@@ -73,10 +76,10 @@ public class Principal {
 			case 1:
 				System.out.println("Nombre del alumno");
 				nombre = Leer.dato();
-
 				System.out.println("Apellido del alumno");
 				apellido = Leer.dato();
-				Alumno a = new Alumno(nombre, apellido, idAlumno);
+				System.out.println("indique la edad");
+				a = new Alumno(nombre, apellido, idAlumno);
 				idAlumno++;
 
 				Collections.addAll(alumnos, a);
