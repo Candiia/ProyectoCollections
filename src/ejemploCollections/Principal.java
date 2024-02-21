@@ -161,9 +161,9 @@ public class Principal {
 					break;
 					
 				case 10:
-					System.out.println("Indique el código del alumno que desea eliminar");
+					System.out.println("Indique el código del alumno que desea modificar su nota");
 					codAlumnoBuscado=Leer.datoInt();
-					System.out.println("Inidque la nota nueva");
+					System.out.println("Indique la nota nueva");
 					notaNueva=Leer.datoDouble();
 					
 					cA.modificarNota(codAlumnoBuscado, notaNueva);
