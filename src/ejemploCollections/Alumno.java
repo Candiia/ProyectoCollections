@@ -8,6 +8,8 @@ public class Alumno implements Comparable <Alumno>{
 	private int edad;
 	private double notaMedia;
 	
+	
+
 	public Alumno(String nombre, String apellidos, int idAlumno, int edad, double notaMedia) {
 		super();
 		this.nombre = nombre;
@@ -53,12 +55,10 @@ public class Alumno implements Comparable <Alumno>{
 		return notaMedia;
 	}
 
-	public void setNotaMedia(int notaMedia) {
+	public void setNotaMedia(double notaMedia) {
 		this.notaMedia = notaMedia;
 	}
 
-	
-	
 	@Override
 	public String toString() {
 		return "Alumno [nombre=" + nombre + ", apellidos=" + apellidos + ", idAlumno=" + idAlumno + ", edad=" + edad

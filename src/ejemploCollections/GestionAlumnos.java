@@ -44,16 +44,6 @@ public class GestionAlumnos {
 		return Collections.min(listaAlumnos);
 	}
 	
-	/*Aquí mostramos la lista*/
-	public void mostrarLista() {
-		int posicion=0;
-		for (Alumno alumnos : listaAlumnos) {
-			posicion++;
-			System.out.println(posicion + "-" + alumnos);
-		}
-	}
-	
-	
 	/*Vamos a invertir la lista*/
 	
 	public void invertirLista() {
@@ -84,4 +74,5 @@ public class GestionAlumnos {
 	public void cambiarPosicion(int posicion, int posNuevo) {
 		Collections.swap(listaAlumnos, posicion -1 , posNuevo - 1);
 	}
+
 }
